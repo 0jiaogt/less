@@ -1,0 +1,98 @@
+@width : 100px;
+@height: 100px-20;
+@color : #ff0000-#440000;
+
+div {
+    width : @width;
+    height: @height;
+    color : firebrick;
+
+    p {
+        color           : @color;
+        background-color: rebeccapurple;
+    }
+
+    @classname: box;
+    @imgsrc   : "img/";
+
+    ::after {
+        color           : red;
+        content         : @imgsrc;
+        background-image: url('@{imgsrc}awdad');
+        background-image: url("@{imgsrc}");
+    }
+}
+
+div,
+p {
+    &:after & {
+        color: firebrick;
+    }
+}
+
+.father {
+    width           : 500px;
+    height          : 200px;
+    background-color: gold;
+
+    p {
+        font-size: 25px;
+    }
+}
+
+.son:extend(.father):extend(.father p) {
+    color: red;
+}
+
+//混合
+.mixi {
+    width : 200px;
+    height: 200px;
+}
+
+.box1 {
+    .mixi;
+    color: red;
+}
+
+.box2 {
+    // .mixi{
+    //     width: 1000px;
+    // }
+    color: blue;
+}
+
+//混合器函数形式
+.mixi1() {
+    width : 200px;
+    height: 200px;
+}
+
+.small1 {
+    .mixi();
+    color: red;
+}
+
+.small2 {
+    .mixi1();
+    color: blue;
+}
+
+//混合器函数形式还可以传参
+.mixi1(@color) {
+    width           : 200px;
+    height          : 200px;
+    background-color: @color;
+}
+
+.small1 {
+    .mixi1(red);
+    color: red;
+}
+
+.small2 {
+    .mixi1(pink);
+    color: blue;
+}
+
+//混合器

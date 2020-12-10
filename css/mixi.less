@@ -1,0 +1,43 @@
+.mixi(@index) when(@index<35){
+    li {
+        &:nth-child(@{index}){
+            width: @index*10px;
+            height: @index+0px;
+        }
+    }
+    .mixi(@index+1);
+}
+.mixi(1);
+
+//混合器函数形式
+.mixi1() {
+    width : 200px;
+    height: 200px;
+}
+
+.small1 {
+    .mixi1();
+    color: red;
+}
+
+.small2 {
+    .mixi1();
+    color: blue;
+}
+
+//混合器函数形式还可以传参
+.mixi1(@color) {
+    width           : 200px;
+    height          : 200px;
+    background-color: @color;
+}
+
+.small1 {
+    .mixi1(red);
+    color: red;
+}
+
+.small2 {
+    .mixi1(pink);
+    color: blue;
+}

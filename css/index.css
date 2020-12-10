@@ -1,0 +1,44 @@
+ul {
+  margin: 50px auto;
+  border: 1px solid black;
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  overflow: hidden;
+}
+ul li {
+  float: left;
+}
+ul li:nth-child(1) {
+  border: 50px solid white;
+  border-right-color: blue;
+}
+ul li:nth-child(2) {
+  border: 25px solid white;
+  border-right-color: red;
+}
+ul li:nth-child(3) {
+  border: 50px solid white;
+  border-top-color: blue;
+}
+ul li:nth-child(4) {
+  border: 25px solid white;
+  border-top-color: red;
+}
+ul li:nth-child(5) {
+  border: 50px solid white;
+  border-left-color: blue;
+}
+ul li:nth-child(6) {
+  border: 25px solid white;
+  border-left-color: red;
+}
+ul li:nth-child(7) {
+  border: 50px solid white;
+  border-bottom-color: blue;
+}
+bottom ul li:nth-child(8) {
+  border: 25px solid white;
+  border-bottom-color: red;
+}
+/*# sourceMappingURL=./index.css.map */

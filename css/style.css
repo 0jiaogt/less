@@ -1,0 +1,69 @@
+div {
+  width: 100px;
+  height: 80px;
+  color: firebrick;
+}
+div p {
+  color: #bb0000;
+  background-color: rebeccapurple;
+}
+div ::after {
+  color: red;
+  content: "img/";
+  background-image: url('img/awdad');
+  background-image: url("img/");
+}
+div:after div,
+div:after p,
+p:after div,
+p:after p {
+  color: firebrick;
+}
+.father,
+.son {
+  width: 500px;
+  height: 200px;
+  background-color: gold;
+}
+.father p,
+.son {
+  font-size: 25px;
+}
+.son {
+  color: red;
+}
+.mixi {
+  width: 200px;
+  height: 200px;
+}
+.box1 {
+  width: 200px;
+  height: 200px;
+  color: red;
+}
+.box2 {
+  color: blue;
+}
+.small1 {
+  width: 200px;
+  height: 200px;
+  color: red;
+}
+.small2 {
+  width: 200px;
+  height: 200px;
+  color: blue;
+}
+.small1 {
+  width: 200px;
+  height: 200px;
+  background-color: red;
+  color: red;
+}
+.small2 {
+  width: 200px;
+  height: 200px;
+  background-color: pink;
+  color: blue;
+}
+/*# sourceMappingURL=./style.css.map */
